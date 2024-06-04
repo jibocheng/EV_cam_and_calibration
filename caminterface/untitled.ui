@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>typeselection</class>
+ <widget class="QWidget" name="typeselection">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>223</width>
+    <height>106</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">outline: none;
+color: rgb(255, 255, 255);
+background-color: rgb(62, 63, 63);</string>
+  </property>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>201</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox
+{
+	text-align: center;
+	min-width: 60px; min-height: 22px;
+   	background-color: rgb(50, 50, 63);
+    color: white;
+	border: 2px solid gray;
+	border-color: rgb(35, 143, 159);
+};
+
+QCheckBox::indicator:unchecked
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(85, 255, 255);
+    width: 24px;
+    height: 24px;
+    background-color: rgb(85, 170, 127);
+};
+
+QCheckBox::indicator:checked
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+};
+
+QCheckBox::indicator:hover
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(170, 170, 0);
+}
+
+QCheckBox::indicator:hover
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(170, 170, 0);
+}
+
+QCheckBox::indicator:uncheck:disable
+{
+    border-style: solid;
+    border-width: 1px;
+    width: 24px;
+    height: 24px;
+    background-color:rgb(168, 168, 168);
+};
+
+QCheckBox::indicator:indeterminate
+{
+    border-style: solid;
+    border-width: 1px;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(255, 85, 0);
+}
+
+
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>RGB</string>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>201</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox
+{
+	text-align: center;
+	min-width: 60px; min-height: 22px;
+   	background-color: rgb(50, 50, 63);
+    color: white;
+	border: 2px solid gray;
+	border-color: rgb(35, 143, 159);
+};
+
+QCheckBox::indicator:unchecked
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(85, 255, 255);
+    width: 24px;
+    height: 24px;
+    background-color: rgb(85, 170, 127);
+};
+
+QCheckBox::indicator:checked
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+};
+
+QCheckBox::indicator:hover
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(170, 170, 0);
+}
+
+QCheckBox::indicator:hover
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(170, 170, 0);
+}
+
+QCheckBox::indicator:uncheck:disable
+{
+    border-style: solid;
+    border-width: 1px;
+    width: 24px;
+    height: 24px;
+    background-color:rgb(168, 168, 168);
+};
+
+QCheckBox::indicator:indeterminate
+{
+    border-style: solid;
+    border-width: 1px;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(255, 85, 0);
+}
+
+
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>DEPTH</string>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>60</y>
+     <width>201</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox
+{
+	text-align: center;
+	min-width: 60px; min-height: 22px;
+   	background-color: rgb(50, 50, 63);
+    color: white;
+	border: 2px solid gray;
+	border-color: rgb(35, 143, 159);
+};
+
+QCheckBox::indicator:unchecked
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(85, 255, 255);
+    width: 24px;
+    height: 24px;
+    background-color: rgb(85, 170, 127);
+};
+
+QCheckBox::indicator:checked
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+};
+
+QCheckBox::indicator:hover
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(170, 170, 0);
+}
+
+QCheckBox::indicator:hover
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(170, 170, 0);
+}
+
+QCheckBox::indicator:uncheck:disable
+{
+    border-style: solid;
+    border-width: 1px;
+    width: 24px;
+    height: 24px;
+    background-color:rgb(168, 168, 168);
+};
+
+QCheckBox::indicator:indeterminate
+{
+    border-style: solid;
+    border-width: 1px;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(255, 85, 0);
+}
+
+
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>POINTCLOD</string>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

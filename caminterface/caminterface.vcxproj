@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="cameraSetup.ui" />
+    <QtUic Include="caminter.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="cameraManagerHikvision.h" />
+    <ClInclude Include="sharedate.h" />
+    <QtMoc Include="cameraManager.h" />
+    <QtMoc Include="cameraSetup.h" />
+    <ClInclude Include="MyThread.h" />
+    <QtMoc Include="cameraInterface.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cameraInterface.cpp" />
+    <ClCompile Include="cameraManager.cpp" />
+    <ClCompile Include="cameraManagerHikvision.cpp" />
+    <ClCompile Include="cameraSetup.cpp" />
+    <ClCompile Include="interfaceTest.cpp" />
+    <ClCompile Include="MyThread.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8A5542C6-6BBB-4D39-9292-914B8CD6D0F5}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>E:\QT\5.15.2\msvc2019_64\include;D:\opencv4.9\opencv\rebuild\install\include;D:\opencv4.9\opencv\rebuild\install\include\opencv2;C:\Program Files %28x86%29\Intel RealSense SDK 2.0\include;C:\Program Files %28x86%29\Intel RealSense SDK 2.0\include\librealsense2\h;D:\OrbbecSDK_v1.9.5\SDK\include;D:\OrbbecSDK_v1.9.5\SDK\include\libobsensor;E:\SDK_MVCamCtrl_Win_V4.3.1_V2.3.3\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\QT\5.15.2\msvc2019_64\lib;D:\opencv4.9\opencv\rebuild\install\x64\vc15\lib;C:\Program Files %28x86%29\Intel RealSense SDK 2.0\lib\x64;C:\Program Files %28x86%29\Intel RealSense SDK 2.0\lib;D:\OrbbecSDK_v1.9.5\SDK\lib;E:\SDK_MVCamCtrl_Win_V4.3.1_V2.3.3\Libs\win64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>Qt5Widgetsd.lib;Qt5Widgets.lib;Qt5Guid.lib;Qt5Gui.lib;Qt5Cored.lib;Qt5Core.lib;opencv_aruco490d.lib;opencv_bgsegm490d.lib;opencv_bioinspired490d.lib;opencv_calib3d490d.lib;opencv_ccalib490d.lib;opencv_core490d.lib;opencv_datasets490d.lib;opencv_dnn_objdetect490d.lib;opencv_dnn_superres490d.lib;opencv_dnn490d.lib;opencv_dpm490d.lib;opencv_face490d.lib;opencv_features2d490d.lib;opencv_flann490d.lib;opencv_fuzzy490d.lib;opencv_gapi490d.lib;opencv_hfs490d.lib;opencv_highgui490d.lib;opencv_img_hash490d.lib;opencv_imgcodecs490d.lib;opencv_imgproc490d.lib;opencv_intensity_transform490d.lib;opencv_line_descriptor490d.lib;opencv_mcc490d.lib;opencv_ml490d.lib;opencv_objdetect490d.lib;opencv_optflow490d.lib;opencv_photo490d.lib;opencv_plot490d.lib;opencv_xfeatures2d490d.lib;opencv_ximgproc490d.lib;opencv_xobjdetect490d.lib;opencv_xphoto490d.lib;opencv_surface_matching490d.lib;realsense2.lib;OrbbecSDK.lib;MvCameraControl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\QT\5.15.2\msvc2019_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\QT\5.15.2\msvc2019_64\include;E:\QT\5.15.2\msvc2019_64\include\QtCore\5.15.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
